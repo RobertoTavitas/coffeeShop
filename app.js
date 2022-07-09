@@ -25,9 +25,16 @@ document.querySelector('#cart-btn').onclick = () => {
     searchForm.classList.remove('active');
 }
 
-// 
+// hide on scroll
 window.onscroll = () => {
     navbar.classList.remove('active');
     searchForm.classList.remove('active');
     cartItem.classList.remove('active');
 }
+
+// Like button
+const likeBtn = document.querySelectorAll('.fas.fa-heart');
+
+likeBtn.forEach(btn => {
+    btn.addEventListener('click', () => btn.classList.toggle('like'));
+});
